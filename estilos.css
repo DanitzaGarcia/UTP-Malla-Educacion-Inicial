@@ -1,62 +1,67 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f3e5f5; /* lila muy claro */
+  font-family: Arial, sans-serif;
+  background-color: #f3f0ff;
+  color: #2c0735;
   margin: 0;
   padding: 20px;
-  color: #4a148c; /* morado intenso para títulos */
 }
 
 h1 {
   text-align: center;
-  color: #6a1b9a; /* morado medio */
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  color: #5e2b97;
+}
+
+#malla {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.columna-ciclo {
+  min-width: 260px;
 }
 
 .titulo-ciclo {
-  margin-top: 40px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #e0d4f7;
+  border-radius: 8px;
+  padding: 8px;
+  color: #5e2b97;
   margin-bottom: 10px;
-  font-size: 24px;
-  border-left: 6px solid #7b1fa2; /* barra decorativa morada */
-  padding-left: 10px;
-  color: #4a148c;
 }
 
 .grid-ciclo {
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 30px;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .curso {
-  background-color: #d1c4e9; /* morado claro */
-  border: 2px solid #b39ddb;
-  padding: 12px 14px;
-  border-radius: 12px;
-  cursor: not-allowed;
-  opacity: 0.4;
-  transition: all 0.3s ease;
-  width: 220px;
+  background-color: #d2b7f2;
+  border: 2px solid #b089d8;
+  border-radius: 10px;
+  padding: 10px;
   text-align: center;
-  font-size: 14px;
+  cursor: not-allowed;
+  transition: transform 0.2s;
+  user-select: none;
 }
 
 .curso.activo {
+  background-color: #a370f7;
   cursor: pointer;
-  opacity: 1;
-  background-color: #ce93d8; /* tono lavanda más fuerte */
-  border-color: #ab47bc;
-}
-
-.curso.activo:hover {
-  background-color: #ba68c8;
-  transform: scale(1.03);
-  box-shadow: 0 4px 8px rgba(74, 20, 140, 0.2);
 }
 
 .curso.completado {
-  background-color: #8e24aa; /* morado intenso */
-  color: #fff;
-  border-color: #6a1b9a;
-  font-weight: bold;
+  background-color: #c5ffcc;
+  border: 2px solid #5cb85c;
+  color: #2d5f2d;
+  text-decoration: line-through;
+}
+
+.curso.activo:hover {
+  transform: scale(1.05);
 }
