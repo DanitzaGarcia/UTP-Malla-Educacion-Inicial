@@ -1,1 +1,50 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e6f2fb;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 15px;
+  padding: 10px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.curso {
+  background-color: #b3d9f5;
+  border: 2px solid #0077b6;
+  border-radius: 10px;
+  padding: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.curso.activo {
+  pointer-events: auto;
+  opacity: 1;
+  background-color: #61bdf2;
+}
+
+.curso.completado {
+  background-color: #1e88e5;
+  color: white;
+  font-weight: bold;
+  border-color: #145da0;
+}
+
+.curso:hover {
+  transform: scale(1.05);
+}
 
