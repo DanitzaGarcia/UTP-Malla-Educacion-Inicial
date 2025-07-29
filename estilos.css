@@ -1,70 +1,62 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f3e5f5;
+  font-family: Arial, sans-serif;
+  background-color: #f3f0f8;
+  color: #333;
   margin: 0;
   padding: 20px;
-  color: #4a148c;
 }
 
 h1 {
   text-align: center;
-  color: #6a1b9a;
-  margin-bottom: 40px;
+  color: #5e2ca5;
+  margin-bottom: 30px;
 }
 
-#malla {
+.contenedor-malla {
   display: flex;
-  gap: 30px;
+  flex-direction: row;
   overflow-x: auto;
-  padding-bottom: 20px;
+  gap: 20px;
+  padding: 10px;
 }
 
-.columna-ciclo {
-  min-width: 250px;
+.ciclo-columna {
+  min-width: 200px;
+  background-color: #e6def5;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 0 8px rgba(94, 44, 165, 0.2);
 }
 
 .titulo-ciclo {
-  font-size: 20px;
+  text-align: center;
+  color: #5e2ca5;
   margin-bottom: 10px;
-  border-left: 6px solid #7b1fa2;
-  padding-left: 10px;
-  color: #4a148c;
-}
-
-.grid-ciclo {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  font-size: 1.1em;
 }
 
 .curso {
-  background-color: #d1c4e9;
-  border: 2px solid #b39ddb;
-  padding: 12px 14px;
-  border-radius: 12px;
-  cursor: not-allowed;
-  opacity: 0.4;
+  background-color: #d5c4f0;
+  color: #333;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 8px;
+  cursor: pointer;
   transition: all 0.3s ease;
-  text-align: center;
-  font-size: 14px;
+  font-size: 0.95em;
+}
+
+.curso:hover {
+  background-color: #c2a9f0;
 }
 
 .curso.activo {
-  cursor: pointer;
-  opacity: 1;
-  background-color: #ce93d8;
-  border-color: #ab47bc;
-}
-
-.curso.activo:hover {
-  background-color: #ba68c8;
-  transform: scale(1.03);
-  box-shadow: 0 4px 8px rgba(74, 20, 140, 0.2);
+  background-color: #b799ff;
+  font-weight: bold;
 }
 
 .curso.completado {
-  background-color: #8e24aa;
-  color: #fff;
-  border-color: #6a1b9a;
-  font-weight: bold;
+  background-color: #9370db;
+  color: white;
+  text-decoration: line-through;
 }
