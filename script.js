@@ -54,7 +54,7 @@ const cursos = [
   { id: "40", nombre: "Diseño De Proyectos Educativos Innovadores", ciclo: 7, prerequisitos: ["26", "37"] },
   { id: "41", nombre: "Tecnología Y Comunicación En La Educación", ciclo: 7, prerequisitos: ["7", "23"] },
   { id: "42", nombre: "Métodos Cualitativos Para La Educación", ciclo: 7, prerequisitos: ["30"] },
-  { id: "43", nombre: "Interacciones 1 A 1 (Nivel Inicial)", ciclo: 7, prerequisitos: ["29", "33"] },
+  { id: "43", nombre: "Interacciones 1 A 1 (Nivel Inicial)", ciclo: 7, prerequisitos: ["29", "35"] },
   { id: "44", nombre: "Práctica Educativa II: Educación En Contextos No Formales Para Educación Inicial", ciclo: 7, prerequisitos: ["13", "25"] },
 
   // Ciclo 8
@@ -91,8 +91,8 @@ function renderMalla() {
     ciclosAgrupados[curso.ciclo].push(curso);
   });
 
-  const contenedorHorizontal = document.createElement("div");
-  contenedorHorizontal.classList.add("contenedor-horizontal");
+  const fila = document.createElement("div");
+  fila.classList.add("fila-ciclos");
 
   Object.keys(ciclosAgrupados).sort((a, b) => a - b).forEach(ciclo => {
     const columna = document.createElement("div");
@@ -109,9 +109,9 @@ function renderMalla() {
       div.classList.add("curso");
       if (desbloqueado) div.classList.add("activo");
       if (completados.has(curso.id)) div.classList.add("completado");
-      div.textContent = `${curso.nombre}`;
+      div.textContent = curso.nombre;
       div.addEventListener("click", () => {
-        if (!completados.has(curso.id) && desbloqueado) {
+        if (!completados.has(curso.id)) {
           completados.add(curso.id);
           renderMalla();
         }
@@ -119,10 +119,10 @@ function renderMalla() {
       columna.appendChild(div);
     });
 
-    contenedorHorizontal.appendChild(columna);
+    fila.appendChild(columna);
   });
 
-  contenedor.appendChild(contenedorHorizontal);
+  contenedor.appendChild(fila);
 }
 
 renderMalla();
