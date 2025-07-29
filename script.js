@@ -16,65 +16,65 @@ const cursos = [
   { id: "12", nombre: "Comprensión Y Redacción De Textos II", ciclo: 2, prerequisitos: ["5"] },
 
   // Ciclo 3
-  { id: "13", nombre: "Psicología Evolutiva", ciclo: 3, prerequisitos: ["1"] },
-  { id: "14", nombre: "Realidad Nacional", ciclo: 3, prerequisitos: ["3"] },
-  { id: "15", nombre: "Currículo", ciclo: 3, prerequisitos: ["10"] },
-  { id: "16", nombre: "Educación Inclusiva", ciclo: 3, prerequisitos: ["10"] },
-  { id: "17", nombre: "Inglés III", ciclo: 3, prerequisitos: ["11"] },
-  { id: "18", nombre: "Lectura Y Producción De Textos Académicos", ciclo: 3, prerequisitos: ["12"] },
+  { id: "13", nombre: "Neurociencia Aplicada Al Aprendizaje", ciclo: 3, prerequisitos: ["1"] },
+  { id: "14", nombre: "Atención Oportuna", ciclo: 3, prerequisitos: ["1", "8"] },
+  { id: "15", nombre: "Didáctica General", ciclo: 3, prerequisitos: ["10"] },
+  { id: "16", nombre: "Psicología Del Desarrollo Infantil", ciclo: 3, prerequisitos: ["1"] },
+  { id: "17", nombre: "Liderazgo Para El Cambio Educativo", ciclo: 3, prerequisitos: [] },
+  { id: "18", nombre: "Inglés III", ciclo: 3, prerequisitos: ["11"] },
+  { id: "19", nombre: "Problemas Y Desafíos En El Perú Actual", ciclo: 3, prerequisitos: ["3", "12"] },
 
   // Ciclo 4
-  { id: "19", nombre: "Psicología Del Aprendizaje", ciclo: 4, prerequisitos: ["13"] },
-  { id: "20", nombre: "Sociedad Y Educación", ciclo: 4, prerequisitos: ["14"] },
-  { id: "21", nombre: "Didáctica General", ciclo: 4, prerequisitos: ["15"] },
-  { id: "22", nombre: "Evaluación Del Aprendizaje", ciclo: 4, prerequisitos: ["15"] },
-  { id: "23", nombre: "Inglés IV", ciclo: 4, prerequisitos: ["17"] },
-  { id: "24", nombre: "Metodología De La Investigación", ciclo: 4, prerequisitos: ["18"] },
+  { id: "20", nombre: "Didáctica De La Educación Infantil I: Aprender A Través Del Juego", ciclo: 4, prerequisitos: ["15"] },
+  { id: "21", nombre: "Desarrollo De La Expresión Artística", ciclo: 4, prerequisitos: ["16"] },
+  { id: "22", nombre: "Psicología Del Aprendizaje", ciclo: 4, prerequisitos: ["13", "16"] },
+  { id: "23", nombre: "Planificación Curricular Y Diversificación", ciclo: 4, prerequisitos: ["15"] },
+  { id: "24", nombre: "Inglés IV", ciclo: 4, prerequisitos: ["18"] },
+  { id: "25", nombre: "Práctica Educativa I: Psicomotricidad Para Educación Inicial", ciclo: 4, prerequisitos: ["15", "16"] },
 
   // Ciclo 5
-  { id: "25", nombre: "Psicología Del Desarrollo", ciclo: 5, prerequisitos: ["19"] },
-  { id: "26", nombre: "Política Educativa", ciclo: 5, prerequisitos: ["20"] },
-  { id: "27", nombre: "Didáctica De La Educación Inicial", ciclo: 5, prerequisitos: ["21"] },
-  { id: "28", nombre: "Taller De Expresión Gráfico Plástica", ciclo: 5, prerequisitos: [] },
-  { id: "29", nombre: "Electivo I", ciclo: 5, prerequisitos: [] },
-  { id: "30", nombre: "Seminario De Investigación I", ciclo: 5, prerequisitos: ["24"] },
+  { id: "26", nombre: "Políticas Y Gestión Educativa", ciclo: 5, prerequisitos: ["17"] },
+  { id: "27", nombre: "Didáctica De La Educación Infantil II: Aprendizaje Basado En Proyectos Y Problemas", ciclo: 5, prerequisitos: ["20", "23"] },
+  { id: "28", nombre: "Enseñanza De Una Segunda Lengua", ciclo: 5, prerequisitos: ["20", "22"] },
+  { id: "29", nombre: "Planificando Y Evaluando El Desarrollo De Competencias En Inicial", ciclo: 5, prerequisitos: ["22", "23"] },
+  { id: "30", nombre: "Investigación Académica", ciclo: 5, prerequisitos: ["3", "12"] },
+  { id: "31", nombre: "Ciudadanía Y Reflexión Ética", ciclo: 5, prerequisitos: ["3", "12"] },
+  { id: "32", nombre: "Elementary Business English", ciclo: 5, prerequisitos: ["24"] },
 
   // Ciclo 6
-  { id: "31", nombre: "Neurociencia Y Educación", ciclo: 6, prerequisitos: ["25"] },
-  { id: "32", nombre: "Gestión Educativa", ciclo: 6, prerequisitos: ["26"] },
-  { id: "33", nombre: "Diseño Y Elaboración De Material Educativo", ciclo: 6, prerequisitos: ["27"] },
-  { id: "34", nombre: "Taller De Juegos", ciclo: 6, prerequisitos: [] },
-  { id: "35", nombre: "Electivo II", ciclo: 6, prerequisitos: [] },
-  { id: "36", nombre: "Seminario De Investigación II", ciclo: 6, prerequisitos: ["30"] },
+  { id: "33", nombre: "Habilidades Previas Para La Lectoescritura", ciclo: 6, prerequisitos: ["27"] },
+  { id: "34", nombre: "Desarrollo Social Y Ciudadanía Del Niño", ciclo: 6, prerequisitos: ["29"] },
+  { id: "35", nombre: "Problemas De Aprendizaje Y De Conducta", ciclo: 6, prerequisitos: ["13"] },
+  { id: "36", nombre: "Indagación Del Entorno Natural Del Niño", ciclo: 6, prerequisitos: ["29"] },
+  { id: "37", nombre: "Pensamiento Crítico Y Creatividad (0-5 Años)", ciclo: 6, prerequisitos: ["22", "29"] },
+  { id: "38", nombre: "Pensamiento Matemático Y Su Didáctica", ciclo: 6, prerequisitos: ["29"] },
 
   // Ciclo 7
-  { id: "37", nombre: "Desarrollo Del Pensamiento Infantil", ciclo: 7, prerequisitos: ["31"] },
-  { id: "38", nombre: "Gestión De La Convivencia Escolar", ciclo: 7, prerequisitos: ["32"] },
-  { id: "39", nombre: "Práctica Pre Profesional I", ciclo: 7, prerequisitos: ["33"] },
-  { id: "40", nombre: "Electivo III", ciclo: 7, prerequisitos: [] },
-  { id: "41", nombre: "Seminario De Investigación III", ciclo: 7, prerequisitos: ["36"] },
+  { id: "39", nombre: "Didáctica De La Competencia De Lectoescritura", ciclo: 7, prerequisitos: ["33"] },
+  { id: "40", nombre: "Diseño De Proyectos Educativos Innovadores", ciclo: 7, prerequisitos: ["26", "37"] },
+  { id: "41", nombre: "Tecnología Y Comunicación En La Educación", ciclo: 7, prerequisitos: ["7", "23"] },
+  { id: "42", nombre: "Métodos Cualitativos Para La Educación", ciclo: 7, prerequisitos: ["30"] },
+  { id: "43", nombre: "Interacciones 1 A 1 (Nivel Inicial)", ciclo: 7, prerequisitos: ["29", "33"] },
+  { id: "44", nombre: "Práctica Educativa II: Educación En Contextos No Formales Para Educación Inicial", ciclo: 7, prerequisitos: ["13", "25"] },
 
   // Ciclo 8
-  { id: "42", nombre: "Didáctica De La Matemática", ciclo: 8, prerequisitos: [] },
-  { id: "43", nombre: "Didáctica De Ciencia Y Ambiente", ciclo: 8, prerequisitos: [] },
-  { id: "44", nombre: "Práctica Pre Profesional II", ciclo: 8, prerequisitos: ["39"] },
-  { id: "45", nombre: "Electivo IV", ciclo: 8, prerequisitos: [] },
-  { id: "46", nombre: "Seminario De Investigación IV", ciclo: 8, prerequisitos: ["41"] },
+  { id: "45", nombre: "Ética Profesional En Educación", ciclo: 8, prerequisitos: ["31"] },
+  { id: "46", nombre: "Promover Vínculos Sanos: 0 A 05 Años", ciclo: 8, prerequisitos: ["17", "43"] },
+  { id: "47", nombre: "Métodos Cuantitativos Para La Educación", ciclo: 8, prerequisitos: ["42"] },
+  { id: "48", nombre: "Implementación Y Evaluación De Proyectos Educativos Innovadores", ciclo: 8, prerequisitos: ["40"] },
+  { id: "49", nombre: "Métodos De Facilitación Y Mediación De Grupos (Inicial)", ciclo: 8, prerequisitos: ["27"] },
+  { id: "50", nombre: "Práctica Educativa III: Desarrollo De Habilidades Diferentes Para Educación Inicial", ciclo: 8, prerequisitos: ["23", "44"] },
 
   // Ciclo 9
-  { id: "47", nombre: "Didáctica De Personal Social", ciclo: 9, prerequisitos: [] },
-  { id: "48", nombre: "Didáctica De Comunicación", ciclo: 9, prerequisitos: [] },
-  { id: "49", nombre: "Práctica Pre Profesional III", ciclo: 9, prerequisitos: ["44"] },
-  { id: "50", nombre: "Electivo V", ciclo: 9, prerequisitos: [] },
-  { id: "51", nombre: "Trabajo De Investigación I", ciclo: 9, prerequisitos: ["46"] },
+  { id: "51", nombre: "Formación Para La Empleabilidad", ciclo: 9, prerequisitos: ["30"] },
+  { id: "52", nombre: "Formación Para La Investigación En Educación", ciclo: 9, prerequisitos: ["47", "50"] },
+  { id: "53", nombre: "Práctica Pre-Profesional I: Educación Inicial", ciclo: 9, prerequisitos: ["50"] },
 
   // Ciclo 10
-  { id: "52", nombre: "Didáctica Del Arte Y La Psicomotricidad", ciclo: 10, prerequisitos: [] },
-  { id: "53", nombre: "Didáctica De Inglés", ciclo: 10, prerequisitos: [] },
-  { id: "54", nombre: "Práctica Pre Profesional IV", ciclo: 10, prerequisitos: ["49"] },
-  { id: "55", nombre: "Electivo VI", ciclo: 10, prerequisitos: [] },
-  { id: "56", nombre: "Trabajo De Investigación II", ciclo: 10, prerequisitos: ["51"] },
-  { id: "57", nombre: "Sistematización De La Práctica", ciclo: 10, prerequisitos: ["54"] },
+  { id: "54", nombre: "Trabajo Con La Familia Y Comunidad", ciclo: 10, prerequisitos: ["26"] },
+  { id: "55", nombre: "Taller De Investigación En Educación", ciclo: 10, prerequisitos: ["52"] },
+  { id: "56", nombre: "Tutoría Y Acompañamiento A Estudiantes", ciclo: 10, prerequisitos: ["46"] },
+  { id: "57", nombre: "Práctica Pre-Profesional II: Educación Inicial", ciclo: 10, prerequisitos: ["53"] },
 ];
 
 const completados = new Set();
@@ -91,6 +91,9 @@ function renderMalla() {
     ciclosAgrupados[curso.ciclo].push(curso);
   });
 
+  const contenedorHorizontal = document.createElement("div");
+  contenedorHorizontal.classList.add("contenedor-horizontal");
+
   Object.keys(ciclosAgrupados).sort((a, b) => a - b).forEach(ciclo => {
     const columna = document.createElement("div");
     columna.classList.add("columna-ciclo");
@@ -100,28 +103,26 @@ function renderMalla() {
     titulo.classList.add("titulo-ciclo");
     columna.appendChild(titulo);
 
-    const grid = document.createElement("div");
-    grid.classList.add("grid-ciclo");
-
     ciclosAgrupados[ciclo].forEach(curso => {
       const desbloqueado = curso.prerequisitos.every(id => completados.has(id));
       const div = document.createElement("div");
       div.classList.add("curso");
       if (desbloqueado) div.classList.add("activo");
       if (completados.has(curso.id)) div.classList.add("completado");
-      div.textContent = curso.nombre;
+      div.textContent = `${curso.nombre}`;
       div.addEventListener("click", () => {
         if (!completados.has(curso.id) && desbloqueado) {
           completados.add(curso.id);
           renderMalla();
         }
       });
-      grid.appendChild(div);
+      columna.appendChild(div);
     });
 
-    columna.appendChild(grid);
-    contenedor.appendChild(columna);
+    contenedorHorizontal.appendChild(columna);
   });
+
+  contenedor.appendChild(contenedorHorizontal);
 }
 
 renderMalla();
