@@ -91,12 +91,9 @@ function renderMalla() {
     ciclosAgrupados[curso.ciclo].push(curso);
   });
 
-  const fila = document.createElement("div");
-  fila.classList.add("fila-ciclos");
-
   Object.keys(ciclosAgrupados).sort((a, b) => a - b).forEach(ciclo => {
     const columna = document.createElement("div");
-    columna.classList.add("columna-ciclo");
+    columna.classList.add("ciclo-columna");
 
     const titulo = document.createElement("h2");
     titulo.textContent = `Ciclo ${ciclo}`;
@@ -119,10 +116,8 @@ function renderMalla() {
       columna.appendChild(div);
     });
 
-    fila.appendChild(columna);
+    contenedor.appendChild(columna);
   });
-
-  contenedor.appendChild(fila);
 }
 
 renderMalla();
