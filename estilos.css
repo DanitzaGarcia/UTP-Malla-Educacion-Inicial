@@ -1,50 +1,62 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #e6f2fb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3e5f5; /* lila muy claro */
   margin: 0;
   padding: 20px;
-  text-align: center;
+  color: #4a148c; /* morado intenso para títulos */
 }
 
 h1 {
-  color: #0077b6;
-  margin-bottom: 20px;
+  text-align: center;
+  color: #6a1b9a; /* morado medio */
+  margin-bottom: 40px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+.titulo-ciclo {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  border-left: 6px solid #7b1fa2; /* barra decorativa morada */
+  padding-left: 10px;
+  color: #4a148c;
+}
+
+.grid-ciclo {
+  display: flex;
+  flex-wrap: wrap;
   gap: 15px;
-  padding: 10px;
-  max-width: 1400px;
-  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .curso {
-  background-color: #b3d9f5;
-  border: 2px solid #0077b6;
-  border-radius: 10px;
-  padding: 12px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-  pointer-events: none;
-  opacity: 0.5;
+  background-color: #d1c4e9; /* morado claro */
+  border: 2px solid #b39ddb;
+  padding: 12px 14px;
+  border-radius: 12px;
+  cursor: not-allowed;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+  width: 220px;
+  text-align: center;
+  font-size: 14px;
 }
 
 .curso.activo {
-  pointer-events: auto;
+  cursor: pointer;
   opacity: 1;
-  background-color: #61bdf2;
+  background-color: #ce93d8; /* tono lavanda más fuerte */
+  border-color: #ab47bc;
+}
+
+.curso.activo:hover {
+  background-color: #ba68c8;
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(74, 20, 140, 0.2);
 }
 
 .curso.completado {
-  background-color: #1e88e5;
-  color: white;
+  background-color: #8e24aa; /* morado intenso */
+  color: #fff;
+  border-color: #6a1b9a;
   font-weight: bold;
-  border-color: #145da0;
 }
-
-.curso:hover {
-  transform: scale(1.05);
-}
-
