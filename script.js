@@ -78,7 +78,6 @@ const cursos = [
 ];
 
 const completados = new Set(JSON.parse(localStorage.getItem("cursosCompletados") || "[]"));
-
 const contenedor = document.getElementById("malla");
 
 function guardarCompletados() {
@@ -109,21 +108,39 @@ function renderMalla() {
       const desbloqueado = curso.prerequisitos.every(id => completados.has(id));
       const div = document.createElement("div");
       div.classList.add("curso");
+
       if (desbloqueado) div.classList.add("activo");
       if (completados.has(curso.id)) div.classList.add("completado");
+
       div.textContent = curso.nombre;
+
       div.addEventListener("click", () => {
-        if (!completados.has(curso.id)) {
-          completados.add(curso.id);
-          guardarCompletados();
-          renderMalla();
+        if (!desbloqueado && !completados.has(curso.id)) return;
+
+        if (completados.has(curso.id)) {
+          completados.delete(curso.id); // Deselecciona
+        } else {
+          completados.add(curso.id); // Selecciona
         }
+
+        guardarCompletados();
+        renderMalla();
       });
+
       columna.appendChild(div);
     });
 
     contenedor.appendChild(columna);
   });
 }
+
+// Botón de reinicio
+document.getElementById("reiniciar").addEventListener("click", () => {
+  if (confirm("¿Estás seguro de que deseas reiniciar todo tu progreso?")) {
+    completados.clear();
+    guardarCompletados();
+    renderMalla();
+  }
+});
 
 renderMalla();
