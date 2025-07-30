@@ -77,8 +77,13 @@ const cursos = [
   { id: "57", nombre: "Práctica Pre-Profesional II: Educación Inicial", ciclo: 10, prerequisitos: ["53"] },
 ];
 
-const completados = new Set();
+const completados = new Set(JSON.parse(localStorage.getItem("cursosCompletados") || "[]"));
+
 const contenedor = document.getElementById("malla");
+
+function guardarCompletados() {
+  localStorage.setItem("cursosCompletados", JSON.stringify([...completados]));
+}
 
 function renderMalla() {
   contenedor.innerHTML = '';
@@ -110,6 +115,7 @@ function renderMalla() {
       div.addEventListener("click", () => {
         if (!completados.has(curso.id)) {
           completados.add(curso.id);
+          guardarCompletados();
           renderMalla();
         }
       });
